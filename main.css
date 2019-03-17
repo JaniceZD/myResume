@@ -1,0 +1,68 @@
+body { background:#EFEFEF; margin: 0px; }
+a { color: inherit; text-decoration: none; }
+* { margin: 0px; padding: 0px; }
+hr { height: 0px; border: none; border-top: 1px solid #DEDEDE; }
+ul,ol { list-style: none; }
+h1,h2,h3,h4,h5,h6 { font-weight: normal; }
+.clearfix::after { content: ''; display: block; clear: both; }
+
+.topNavBar { padding: 20px 0px; position: fixed;  /*脱离文档流，相对于屏幕固定*/ top: 0; left: 0; width: 100%;
+  transition: all 0.5s; color: #C0C2C5;
+}
+.topNavBar-inner { padding: 0px 16px; }
+.topNavBar  nav { padding-top: 5px; }
+.topNavBar  nav >ul { list-style: none; margin: 0; padding: 0; }
+.topNavBar  nav > ul > li { float: left; margin-left: 17px; margin-right: 17px; }
+.topNavBar  nav > ul > li > a { font-size: 13px; color: inherit; font-weight: bold; border-top:3px solid transparent; border-bottom:3px solid transparent; 
+  padding-top: 5px; padding-bottom: 5px; display: block; }
+.topNavBar  nav > ul > li > a:hover { border-bottom: 3px solid #e06567; }
+
+.topNavBar .logo { font-size: 24px; font-family: "Arial Black"; padding-top: 3px; padding-bottom: 4px; }
+.topNavBar .logo .rs { margin-right: 4px; color: #E8676B; }
+.topNavBar .logo .card { color: #9A9DA2; }
+.banner { height: 515px; background-image:url(./img/rs-cover.jpg); background-position: center center; background-size: cover; }
+.banner .mask { height: 515px; background-color: rgba(0, 0, 0, 0.7); /*增加透明感*/ }
+.userCard { max-width: 940px; margin-left: auto; margin-right: auto; background-color: #FFFFFF; box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5); }
+.userCard .welcome { background: #E8676B; color: #FFFDFD; display: inline-block;
+  /*width: 70px; height: 29px; line-height: 29px; text-align: center;
+  //以上为新手做法
+  */
+  padding: 4px 15px; line-height: 21px; position: relative; margin-bottom: 5px; }
+.userCard .welcome .triangle { display: block; border:9px solid transparent; width: 0px; border-left-color: #E8676B; border-top-width: 0px; position: absolute;/*相对于祖先的第一个relative定位*/  left:4px; top:100%; }
+.userCard .picture { float: left; }
+.userCard .text { float: right; margin-left: 65px; width: 470px; }
+.userCard .text h1 { margin-top: 18px; }
+.userCard .text hr { margin: 20px 0px; }
+.userCard .pictureAndText{ padding: 50px; }
+.userCard dl dt ,.userCard dl dd { float: left; padding: 6px 0px; }
+.userCard dl dt { width: 30%; font-weight: bold; color: #333333; }
+.userCard dl dd { width: 70%; color: #9da0a7; }
+.userCard  > footer.media { background: #E8676B; text-align: center; }
+.userCard  > footer.media >a { border: 1px solid transparent; display: inline-block; border-radius: 50%; width: 40px; line-height: 30px; padding: 5px 0px; margin: 16px; }
+.userCard  > footer.media >a:hover { background: #D05C60; }
+.userCard svg { width: 30px; height: 30px; fill: white; vertical-align: top; }
+
+body > main { margin-top: -345px; }
+body > main .downloadResume-wrapper { text-align: center; }
+body > main .downloadResume { font-size: 14px; line-height: 16px; padding: 21px 55px; border: 1px solid #CDCFD1; display: inline-block; background: #EFEFEF; color: #3d4451; font-weight: bold; margin: 32px; border-radius: 3px; transition: 0.3s; }
+body > main .downloadResume:hover { box-shadow: 0px 4px 13px 0px rgba(0,0,0,0.25); }
+body > main .selfIntroduction { max-width: 940px; margin-left: auto; margin-right: auto; text-align: center; font-family: kaiti; line-height: 1.8; font-size: 20px; }
+section.skills, section.portfolio { max-width: 940px; margin-left: auto; margin-right: auto; margin-top: 60px; }
+section.skills > h2 ,
+section.portfolio > h2 { color: #3d4451; font-size: 34px; line-height: 1.2; font-weight: 600; text-align: center; }
+section.skills  h3 { font-size: 14px; line-height: 1.1; padding-right: 40px; }
+section.skills > ol { background: white; box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.5); padding: 40px 50px 10px; margin-top: 30px; }
+section.skills > ol > li { float: left; width: 48%; box-sizing: border-box; }
+section.skills > ol > li:nth-child(even) { float: right; }
+section.skills .progressBar { height: 5px; background: #FAE1E1; border-radius: 5px; margin: 5px 0px 40px; }
+section.skills .progressBar > .progress { height: 100%; width: 70%; background: #E8676B; border-radius: 5px; }
+section.portfolio { text-align: center; }
+section.portfolio > nav { text-align: center; display: inline-block; vertical-align: top; }
+section.portfolio > nav > ol { margin: 0px auto; display: inline-block; vertical-align: top; }
+section.portfolio > nav > ol > li { float: left; margin-left: 20px; }
+section.portfolio > nav > ol > li:first-child { margin-left: 0px; }
+section.portfolio > nav .bar { height: 5px; background: white; border-radius: 2px; }
+section.portfolio > nav .bar-inner { height: 100%; background: #E8676B; width: 10%; border-radius: 2px; }
+section.portfolio >nav .bar.state-1 .bar-inner { margin-left: 0px; width: 50px; }
+section.portfolio >nav .bar.state-2 .bar-inner { margin-left: 65px; width: 50px; }
+section.portfolio >nav .bar.state-3 .bar-inner { margin-left: 140px; width: 96px; }
