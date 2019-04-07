@@ -115,7 +115,7 @@
 		</div>
 	</div>
 	<main>
-		<div id="siteAbout" class="userCard">
+		<div data-x id="siteAbout" class="userCard">
 			<div class="pictureAndText clearfix">
 				<div class="picture">
 					<img src="./img/avatar.jpg" width="296px" height="343px" alt="头像">
@@ -176,7 +176,7 @@
 			技能：前端开发。
 		</p>
 	</main>
-	<section id="siteSkills" class="skills">
+	<section data-x id="siteSkills" class="skills">
 		<h2>技能</h2>
 		<ol class="clearfix">
 			<li>
@@ -217,7 +217,7 @@
 			</li>
 		</ol>
 	</section>
-	<section id="siteWorks" class="portfolio">
+	<section data-x id="siteWorks" class="portfolio">
 		<h2>作品集</h2>
 		<nav>
 			<ol class="clearfix">
@@ -258,12 +258,32 @@
 			sitewelcome.classList.remove('active')
 		}, 1000)
 
-		window.onscroll = function (xxx) {
+		window.onscroll = function (x) {
 			if (window.scrollY > 0) {
 				topNavBar.classList.add('sticky')
 			} else {
 				topNavBar.classList.remove('sticky')
 			}
+			findClosest()
+		}
+
+		function findClosest(){
+			let specialTags = document.querySelectorAll('[data-x]')
+			let minIndex = 0
+			for(let i = 0; i<specialTags.length; i++){
+				if(Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY)){
+					minIndex = i
+				}
+			}
+
+			let id = specialTags[minIndex].id
+			let a = document.querySelector('a[href="#' + id + '"]')
+			let li = a.parentNode
+			let brothersAndMe = li.parentNode.children
+			for(let i = 0;i<brothersAndMe.length;i++){
+				brothersAndMe[i].classList.remove('highlight')
+			}
+			li.classList.add('highlight')
 		}
 
 		let liTags = document.querySelectorAll('nav.menu > ul >li')
