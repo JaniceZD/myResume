@@ -81,8 +81,9 @@ section.skills  h3 { font-size: 14px; line-height: 1.1; padding-right: 40px; }
 section.skills > ol { background: white; box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.5); padding: 40px 50px 10px; margin-top: 30px; }
 section.skills > ol > li { float: left; width: 48%; box-sizing: border-box; }
 section.skills > ol > li:nth-child(even) { float: right; }
-section.skills .progressBar { height: 5px; background: #FAE1E1; border-radius: 5px; margin: 5px 0px 40px; }
-section.skills .progressBar > .progress { height: 100%; width: 70%; background: #E8676B; border-radius: 5px; }
+section.skills .progressBar { height: 5px; background: #FAE1E1; border-radius: 5px; margin: 5px 0px 40px; overflow: hidden; }
+section.skills .progressBar > .progress { height: 100%; width: 70%; background: #E8676B; border-radius: 5px; transform: translateX(0); transition: all 1s; }
+section.skills.offset .progress { transform: translateX(-100%); }
 section.portfolio { text-align: center; margin-bottom: 100px; }
 section.portfolio > nav { text-align: center; display: inline-block; vertical-align: top; margin-top: 32px;}
 section.portfolio > nav > ol { margin: 0px auto; display: inline-block; vertical-align: top; }
