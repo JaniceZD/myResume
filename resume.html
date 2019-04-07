@@ -258,6 +258,13 @@
 			sitewelcome.classList.remove('active')
 		}, 1000)
 
+		//添加offset类
+		let specialTags = document.querySelectorAll('[data-x]')
+		for(let i = 0;i<specialTags.length;i++){
+			specialTags[i].classList.add('offset')
+		}
+		findClosest()
+
 		window.onscroll = function (x) {
 			if (window.scrollY > 0) {
 				topNavBar.classList.add('sticky')
@@ -276,6 +283,7 @@
 				}
 			}
 
+			specialTags[minIndex].classList.remove('offset')
 			let id = specialTags[minIndex].id
 			let a = document.querySelector('a[href="#' + id + '"]')
 			let li = a.parentNode
