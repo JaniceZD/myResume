@@ -11,6 +11,18 @@ h1,h2,h3,h4,h5,h6 { font-weight: normal; }
 }
 .topNavBar .sticky { background: white; padding: 10px 0px; z-index: 1; box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); color: #3d4451; }
 */
+.icon { width: 1em; height: 1em; vertical-align: -0.15em; fill: currentColor; overflow: hidden; }
+.site-welcome { display: none; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background: #888; z-index: 1; justify-content: center; align-items: center;}
+.site-welcome.active { display: flex; }
+.site-welcome .loading { width: 200px; height: 200px; position: relative; }
+.site-welcome .loading::before,
+.site-welcome.loading::after { content: ''; position: absolute; width: 0px; height: 0px; background: black; border-radius: 50%;
+			top: 0px; left: 0px; bottom: 0px; right: 0px; margin: auto; animation: s 1.5s linear infinite;}
+.site-welcome.loading::after { animation-delay: 0.75s; }
+@keyframes s {
+  0% { width: 0px; height: 0px; opacity: 1; }
+  100% { width: 100px; height: 100px; opacity: 0; }
+}
 [data-x].offset { transform: translateY(100px); }
 [data-x] { transform: translateY(0); transition: all 0.5s; }
 @keyframes slideUp {
@@ -20,8 +32,8 @@ h1,h2,h3,h4,h5,h6 { font-weight: normal; }
 .topNavBar { padding: 20px 0; position: fixed; top: 0; left: 0; width: 100%; 
   transition: all 0.5s; color: #C0C2C5;
 }
-.topNavBar.sticky{background: white;padding: 10px 0; z-index: 1;
-  box-shadow: 0 0 10px rgba(0,0,0,0.25);color: #3d4451;
+.topNavBar.sticky{ background: white; padding: 10px 0; z-index: 1;
+  box-shadow: 0 0 10px rgba(0,0,0,0.25); color: #3d4451;
 }
 .topNavBar-inner { padding: 0px 16px; }
 .topNavBar  nav { padding-top: 5px; }
