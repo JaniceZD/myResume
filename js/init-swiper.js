@@ -1,18 +1,31 @@
 !function () {
-  var mySwiper = new Swiper('.swiper-container', {
-    // Optional parameters
-    loop: true,
+  var view = document.querySelector('#swiper-container')
 
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
+  var controller = {
+    view: null,
+    swiper: null,
+    swiperOptions: {
+      // Optional parameters
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
     },
-
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+    init: function(view) {
+      this.view = view
+      this.initSwiper()
     },
-
-  })
+    initSwiper: function(){
+      this.swiper = new Swiper(this.view, this.swiperOptions)
+    }
+  }
+  controller.init(view)
 }.call()
