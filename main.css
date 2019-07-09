@@ -99,7 +99,8 @@ section.skills .progressBar { height: 5px; background: #FAE1E1; border-radius: 5
 section.skills .progressBar > .progress { height: 100%; width: 70%; background: #E8676B; border-radius: 5px; transform: translateX(0); transition: all 1s; }
 section.skills.offset .progress { transform: translateX(-100%); }
 
-section.portfolio { text-align: center; margin-bottom: 100px; max-width: 812px; }
+section.message ,
+section.portfolio { text-align: center; max-width: 812px; }
 section.message > h2 ,
 section.portfolio > h2 { text-align: center; margin-bottom: 32px; }
 section.portfolio .swiper-container { position: inherit; width: 800px; height: 422px; }
@@ -107,6 +108,6 @@ section.portfolio .swiper-button-prev,
 section.portfolio .swiper-button-next { background-color: white; width: 64px; height: 64px; top: 54.5%; right: 100%; left: auto; border-radius: 50%; }
 section.portfolio .swiper-button-next { left: 100%; right: auto; }
 
-section.message { text-align: center; margin-bottom: 100px; max-width: 812px; }
-section.message > ol { border-top: 1px solid #CDCFD1; margin: 0 auto; max-width: 812px; }
-section.message > ol > li { padding: 16px; border-bottom: 1px solid #CDCFD1; }
+section.message { margin-bottom: 100px; }
+section.message > ol { border-top: 1px solid #C0C2C5; margin: 0 auto; }
+section.message > ol > li { padding: 16px; border-bottom: 1px solid #C0C2C5; }
