@@ -177,9 +177,9 @@
 		</ol>
 		<form id="postMessageForm" style="width:700px; margin: 50px auto;">
 			<label for="">姓名：</label>
-			<input type="text" name="name">
+			<input type="text" name="name" required pattern="\S+">
 			<label for="">留言：</label>
-			<input type="text" name="content">
+			<input type="text" name="content" required pattern="\S+">
 			<input type="submit" value="提交">
 		</form>
 	</section>
