@@ -1,5 +1,5 @@
 !function () {
-  var view = document.querySelector('#swiper-container')
+  var view = View('#swiper-container')
 
   var controller = {
     view: null,
@@ -19,11 +19,11 @@
         prevEl: '.swiper-button-prev',
       },
     },
-    init: function(view) {
+    init: function (view) {
       this.view = view
       this.initSwiper()
     },
-    initSwiper: function(){
+    initSwiper: function () {
       this.swiper = new Swiper(this.view, this.swiperOptions)
     }
   }
